@@ -257,8 +257,7 @@ public class TextSamplerDemo extends JPanel implements ActionListener {
  
     protected void addStylesToDocument(StyledDocument doc) {
         //Initialize some styles.
-        Style def = StyleContext.getDefaultStyleContext().
-                        getStyle(StyleContext.DEFAULT_STYLE);
+        Style def = StyleContext.getDefaultStyleContext().getStyle(StyleContext.DEFAULT_STYLE);
  
         Style regular = doc.addStyle("regular", def);
         StyleConstants.setFontFamily(def, "SansSerif");
