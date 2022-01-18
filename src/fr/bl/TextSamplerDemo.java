@@ -195,8 +195,7 @@ public class TextSamplerDemo extends JPanel implements ActionListener {
             actionLabel.setText(prefix + source.getText() + "\"");
         } else if (passwordFieldString.equals(e.getActionCommand())) {
             JPasswordField source = (JPasswordField)e.getSource();
-            actionLabel.setText(prefix + new String(source.getPassword())
-                                + "\"");
+            actionLabel.setText(prefix + new String(source.getPassword()) + "\"");
         } else if (buttonString.equals(e.getActionCommand())) {
             Toolkit.getDefaultToolkit().beep();
         }
@@ -205,8 +204,7 @@ public class TextSamplerDemo extends JPanel implements ActionListener {
     private JEditorPane createEditorPane() {
         JEditorPane editorPane = new JEditorPane();
         editorPane.setEditable(false);
-        java.net.URL helpURL = TextSamplerDemo.class.getResource(
-                                        "TextSamplerDemoHelp.html");
+        java.net.URL helpURL = TextSamplerDemo.class.getResource("TextSamplerDemoHelp.html");
         if (helpURL != null) {
             try {
                 editorPane.setPage(helpURL);
@@ -216,7 +214,6 @@ public class TextSamplerDemo extends JPanel implements ActionListener {
         } else {
             System.err.println("Couldn't find file: TextSamplerDemoHelp.html");
         }
- 
         return editorPane;
     }
  
@@ -339,8 +336,8 @@ public class TextSamplerDemo extends JPanel implements ActionListener {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                  //Turn off metal's use of bold fonts
-        UIManager.put("swing.boldMetal", Boolean.FALSE);
-        createAndShowGUI();
+                UIManager.put("swing.boldMetal", Boolean.FALSE);
+                createAndShowGUI();
             }
         });
     }
